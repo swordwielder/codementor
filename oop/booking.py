@@ -94,12 +94,9 @@ class Booking:
         return abs(cost - self._cost)
 
     def __str__(self) -> str:
-        toreturn = self.staycation.__str__()
-        second = "Booked at: $" + str(self._cost*self._staycation.nights()) + " Check-in Date: " + str(self.checkInDate()) + " Check-out Date: "+ str(self.checkOutDate())
-        third = self.customer.__str__()
-        return second
-    
-
+        
+        return "Booked at: $" + str(self._cost*self._staycation.nights()) + " Check-in Date: " + str(self.checkInDate()) + " Check-out Date: "+ str(self.checkOutDate())
+        
 cu = Customer('Peter', 99998888)
 h1 = Staycation('Grand Marina', 2, 199)
 h2 = Staycation('random', 1, 49)
